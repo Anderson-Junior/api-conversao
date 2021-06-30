@@ -9,7 +9,7 @@ const NodeHog = require('nodehog');
 
 app.use(config.middlewares.healthMid);
 app.use('/', config.routers);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)); 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('/fahrenheit/:valor/celsius', (req, res) => {
 
@@ -49,6 +49,6 @@ app.put('/stress/:elemento/tempostress/:tempoStress/intervalo/:intervalo/ciclos/
     res.send("OK");
 });
 
-app.listen(8080, () => {
+app.listen(8082, () => {
     console.log("Servidor rodando na porta 8080");
 });
